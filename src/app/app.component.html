@@ -1,0 +1,26 @@
+<div class="mt-5 text-center" style="width:50%; margin: auto">
+  <div class="text-center text-black" style="width: 200px; font-size: larger; margin-bottom:15px;">
+    Random Family Names Limit : {{ limit }}
+  </div>
+
+
+  <input 
+  type="range" 
+  min="1"
+  max="23"
+  value="{{limit}}"
+  class="slider form-control-range"
+  (change)="slideChange($event.target.value)"
+
+  />
+  <button class="btn btn-info" (click)="generate()" style=" width: 200px; ">Generate Names</button>
+ 
+  <div *ngIf="words"  class="card cars-body" style="width: 200px;">
+    <p >
+      {{words}}
+    </p>
+  </div>
+
+</div>
+
+
